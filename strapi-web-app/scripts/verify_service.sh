@@ -4,4 +4,3 @@
 # our deploy_hooks directory.
 . $(dirname $0)/common_variables.sh
 
-ps -ef | grep app.py

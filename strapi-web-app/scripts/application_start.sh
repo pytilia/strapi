@@ -7,27 +7,27 @@
 # After 60 seconds the loop will exit
 timeout=60
 
-echo "Ensuring nginx dir exists ..."
-while [ ! -f /etc/nginx/nginx.conf ];
-do
+#echo "Ensuring nginx dir exists ..."
+#while [ ! -f /etc/nginx/nginx.conf ];
+#do
   # When the timeout is equal to zero, show an error and leave the loop.
-  if [ "$timeout" == 0 ]; then
-    echo "ERROR: Timeout while waiting for the file /etc/nginx/nginx.conf."
+#  if [ "$timeout" == 0 ]; then
+#    echo "ERROR: Timeout while waiting for the file /etc/nginx/nginx.conf."
     #exit 1
-  fi
+#  fi
 
-  echo "#"
-  sleep 1
+#  echo "#"
+#  sleep 1
 
   # Decrease the timeout of one
-  ((timeout--))
-done
+#  ((timeout--))
+#done
 
-sudo mv $DESTINATION_PATH/scripts/nginx.conf /etc/nginx/nginx.conf
+#sudo mv $DESTINATION_PATH/scripts/nginx.conf /etc/nginx/nginx.conf
 
 
-sudo service nginx restart
-env >$DESTINATION_PATH/env.log
-cd $DESTINATION_PATH/strapi-web-app
-npm run develop > $DESTINATION_PATH/app.log 2>&1 &
-exit
+#sudo service nginx restart
+#env >$DESTINATION_PATH/env.log
+#cd $DESTINATION_PATH/strapi-web-app
+#npm run develop > $DESTINATION_PATH/app.log 2>&1 &
+#exit

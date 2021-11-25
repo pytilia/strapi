@@ -18,21 +18,21 @@ if [ $? != 0 ]; then
     sudo yum install -y python3
 fi
 
-ansible-playbook $(dirname $0)/ansible/nginx.yaml --connection=local
+#ansible-playbook $(dirname $0)/ansible/nginx.yaml --connection=local
 
-sudo rm -rf $DESTINATION_PATH/index.html
+#sudo rm -rf $DESTINATION_PATH/index.html
+#
+#cd ~
+#curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+#sudo apt-get install nodejs
+#node -v && npm -v
 
-cd ~
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install nodejs
-node -v && npm -v
+#cd ~
+#mkdir ~/.npm-global
+##npm config set prefix '~/.npm-global'
 
-cd ~
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
+#sudo nano ~/.profile
 
-sudo nano ~/.profile
+#export PATH=~/.npm-global/bin:$PATH
 
-export PATH=~/.npm-global/bin:$PATH
-
-source ~/.profile
+#source ~/.profile
